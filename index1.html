@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Watermark</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #8d98aa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        .container {
+            background: #182434;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(243, 242, 242, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        p {
+            color: #fff;
+        }
+        
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="file"]:hover {
+            border-color: #8d98aa;
+        }
+        
+        button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #8d98aa;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        button:hover {
+            background: #182434;
+            transform: scale(1.05);
+        }
+        
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #8d98aa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hide Watermark</h1>
+        <p>Input image original</p>
+        <input type="file" id="mainImageLoader" accept="image/*">
+        <p>Input image watermark</p>
+        <input type="file" id="watermarkImageLoader" accept="image/*">
+        <button id="downloadBtn">Download</button>
+        <button id="resetBtn">Reset</button>
+        <canvas id="imageCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

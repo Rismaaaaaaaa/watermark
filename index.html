@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermark</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e1ddde;
+        }
+        
+        header {
+            background: #182434;
+            color: #fff;
+            padding: 2em 0;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        
+        .logo {
+            float: left;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        nav {
+            float: right;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+        
+        .hero {
+            background-image: url('bg2.jpg');
+            background-size: cover;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background: #182434;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #8d98aa;
+        }
+        
+        .hide-buttons {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #watermarking {
+            padding: 50px 0;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">WaterMarKing.</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#watermarking">Watermarking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to WaterMarKing</h1>
+                <p>Your ultimate solution for digital watermarking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="watermarking">
+        <h2>Watermarking</h2>
+        <div class="hide-buttons">
+            <a href="index1.html" class="btn btn-hide">Hide Watermark</a>
+        </div>
+        <div class="hide-buttons">
+            <a href="index2.html" class="btn btn-hide">Extract Watermark</a>
+        </div>
+    </section>
+</body>
+
+</html>

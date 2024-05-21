@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Watermark</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #182434;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .container {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        max-width: 400px;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    h2 {
+        font-size: 10px;
+        /* Ubah ukuran font menjadi 14px */
+    }
+    
+    #watermarkedImageLoader {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #extractBtn,
+    #resetBtn {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #182434;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    #extractBtn:hover,
+    #resetBtn:hover {
+        background-color: #8d98aa;
+    }
+    
+    #resultContainer {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .canvas-container {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 45%;
+        flex: 1;
+    }
+    
+    canvas {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid black;
+        max-width: 200px;
+        /* Set lebar maksimum canvas */
+        height: auto;
+        /* Sesuaikan tinggi sesuai rasio aspek gambar */
+    }
+    
+    button {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Extract Watermark</h1>
+        <input type="file" id="watermarkedImageLoader" accept="image/*" />
+        <br><br>
+        <button id="extractBtn">Extract Watermark</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    </div>
+    <div class="result-container-wrapper">
+        <div class="result-container" id="originalContainer">
+
+        </div>
+        <div class="result-container" id="watermarkContainer">
+
+        </div>
+        <br><br>
+        <div id="resultContainer">
+        </div>
+        <script src="extract.js"></script>
+</body>
+
+</html>
